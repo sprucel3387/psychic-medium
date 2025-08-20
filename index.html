@@ -1,65 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psychic and Medium Services</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Afolabi Sync</title>
+  <style>
+    :root {
+      --earth-olive: #556B2F;
+      --earth-tan: #D2B48C;
+      --earth-brown: #8B5E3C;
+      --water-deep: #003366;
+      --water-aqua: #00BFA6;
+      --font-sans: 'Montserrat', sans-serif;
+    }
+    body {
+      margin: 0; font-family: var(--font-sans); color: var(--earth-olive);
+      background: var(--earth-tan);
+    }
+    header { background: var(--water-deep); color: white; padding: 2rem; text-align: center; }
+    nav a { margin: 0 .5rem; color: white; text-decoration: none; }
+    section { padding: 2rem; max-width: 800px; margin: auto; }
+    .button { background: var(--water-aqua); color: white; padding: .75rem 1.5rem; border: none; border-radius: 4px; cursor: pointer; }
+    footer { background: var(--earth-brown); color: white; padding: 2rem; text-align: center; }
+    .responsive-iframe { width: 100%; height: 600px; border: none; }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Psychic and Medium Services</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="home">
-            <h2>Welcome</h2>
-            <p>Discover the insights and guidance you need from our experienced psychics and mediums.</p>
-        </section>
-        
-        <section id="services">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Psychic Readings</li>
-                <li>Mediumship</li>
-                <li>Tarot Card Readings</li>
-                <li>Aura Readings</li>
-            </ul>
-        </section>
-        
-        <section id="about">
-            <h2>About Us</h2>
-            <p>We are a group of skilled psychics and mediums with years of experience in providing spiritual guidance and insight.</p>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form>
-                <button type="submit">Send</button>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <br>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-            </form>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2024 Psychic and Medium Services. All rights reserved.</p>
-    </footer>
-    
-    <script src="scripts.js"></script>
+  <header>
+    <h1>Afolabi Sync</h1>
+    <p>Where movement meets mediumship—Uniting martial arts and spiritual guidance</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#book">Book</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#blog">Blog</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I have been practicing martial arts from various backgrounds for more than a decade. I have found peace within the arts of selection and I have found a deeper connection to my spiritual roots and abilities. My intent and purpose is to bring communities together through communion.</p>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <h3>Martial Arts Training</h3>
+    <ul>
+      <li>Capoeira</li>
+      <li>Boxing</li>
+      <li>Filipino Martial Arts</li>
+      <li>Mixed Martial Arts (MMA)</li>
+    </ul>
+    <p>Offered via home visits, online sessions, community centers, and outdoor spaces.</p>
+    <h3>Spiritual Readings (18+)</h3>
+    <p>Mediumship readings in-person or via Zoom.</p>
+  </section>
+
+  <section id="book">
+    <h2>Book a Session</h2>
+    <!-- Replace with your actual Google Calendar iframe code -->
+    <div>
+      <iframe class="responsive-iframe" src="YOUR_CALENDAR_IFRAME"></iframe>
+    </div>
+    <form action="mailto:sprucel3387@gmail.com" method="POST" enctype="text/plain">
+      <p><label>Your Name: <input type="text" name="Name" required></label></p>
+      <p><label>Email: <input type="email" name="Email" required></label></p>
+      <p><label>Service: <select name="Service"><option>Martial Arts</option><option>Spiritual Reading</option></select></label></p>
+      <p><label>Preferred Date/Time: <input type="text" name="DateTime"></label></p>
+      <p><button type="submit" class="button">Send Booking Request</button></p>
+    </form>
+    <h3>Make a Donation</h3>
+    <!-- Example PayPal SDK code; replace with your hosted_button_id or business -->
+    <div id="paypal-donate-button-container"></div>
+    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+    <script>
+      PayPal.Donation.Button({
+        env: 'production', // or 'sandbox' for testing
+        business: 'YOUR_PAYPAL_EMAIL',
+        image: {
+          src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
+          alt: 'Donate with PayPal'
+        }
+      }).render('#paypal-donate-button-container');
+    </script>
+  </section>
+
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <blockquote>"Deeply transformative sessions—both in the body and the spirit."</blockquote>
+    <blockquote>"Grounded, empowering, and fiercely healing." </blockquote>
+  </section>
+
+  <section id="blog">
+    <h2>Blog & Insights</h2>
+    <article>
+      <h3>Movement & Spirit: The Path to Wholeness</h3>
+      <p>Sample post: exploring how physical and spiritual practice unite communities.</p>
+    </article>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <p><strong>Who can join martial arts sessions?</strong> All ages and skill levels. </p>
+    <p><strong>What are spiritual readings?</strong> Mediumship to guide and connect; must be 18+.</p>
+  </section>
+
+  <section id="disclaimer">
+    <h2>Disclaimer</h2>
+    <p>All spiritual readings offered through Afolabi Sync are intended for spiritual guidance and personal insight. These services are not a substitute for medical, legal, or psychological care. Readings are for individuals 18 years and older.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:sprucel3387@gmail.com">sprucel3387@gmail.com</a></p>
+    <p>Instagram • Threads • TikTok: @blah_33rd</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Afolabi Sync</p>
+  </footer>
 </body>
 </html>
